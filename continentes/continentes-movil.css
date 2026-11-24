@@ -1,0 +1,81 @@
+@media (max-width: 600px) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+    color: #1d3557;
+    background: #f2f7fb;
+  }
+
+  #volver {
+    min-height: 44px;
+    margin: max(12px, env(safe-area-inset-top)) 12px 0;
+    padding: 0 14px;
+    border: 1px solid #d5e4ed;
+    box-shadow: 0 2px 8px rgba(29, 53, 87, .06);
+    font-weight: 600;
+  }
+
+  h1 {
+    margin: 8px 12px 12px;
+    font-size: 1.65rem;
+    line-height: 1.2;
+  }
+
+  #controles-zoom {
+    box-sizing: border-box;
+    width: calc(100% - 24px);
+    justify-content: space-between;
+    gap: 6px;
+    margin: 0 12px 12px;
+    padding: 6px;
+  }
+
+  #controles-zoom button,
+  #info-pais button {
+    min-height: 44px;
+  }
+
+  #selector-pais {
+    box-sizing: border-box;
+    width: calc(100% - 24px);
+    min-height: 48px;
+    margin: 0 12px 10px;
+  }
+
+  .ayuda-navegacion {
+    margin: 0 12px 12px;
+    line-height: 1.45;
+  }
+
+  #mapa-contenedor {
+    margin: 0 12px;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(29, 53, 87, .12);
+  }
+
+  #mapa {
+    border-radius: 14px;
+  }
+
+  #info-pais {
+    width: auto;
+    max-width: none;
+    margin: 12px;
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(29, 53, 87, .1);
+  }
+
+  #info-pais dl div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eef2f4;
+  }
+
+  #info-pais dd {
+    max-width: 60%;
+    overflow-wrap: anywhere;
+  }
+}

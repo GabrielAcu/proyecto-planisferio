@@ -7,10 +7,22 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Planisferio: los seis continentes</h1>
-  <p>Los nombres en azul identifican los océanos; las líneas verticales marcan meridianos cada 30° y la horizontal, el ecuador. Selecciona un continente para ver sus países.</p>
-  <div class="leyenda" id="leyenda"></div>
-  <svg id="mapa" viewBox="0 0 1000 500" aria-label="Planisferio interactivo con continentes y océanos"></svg>
+  <main class="pagina-inicio">
+    <h1>Planisferio: los seis continentes</h1>
+    <p>Los nombres en azul identifican los océanos; las líneas verticales marcan meridianos cada 30° y la horizontal, el ecuador. Selecciona un continente para ver sus países.</p>
+    <div class="leyenda" id="leyenda"></div>
+    <div class="mapa-mundo">
+      <svg id="mapa" viewBox="0 0 1000 500" aria-label="Planisferio interactivo con continentes y océanos"></svg>
+    </div>
+    <nav class="accesos-continentes" aria-label="Explorar por continente">
+      <a class="acceso acceso-africa" href="continentes/africa/index.html">África<small>Explorar países</small></a>
+      <a class="acceso acceso-america" href="continentes/america/index.html">América<small>Explorar países</small></a>
+      <a class="acceso acceso-antartida" href="continentes/antartida/index.html">Antártida<small>Explorar territorios</small></a>
+      <a class="acceso acceso-asia" href="continentes/asia/index.html">Asia<small>Explorar países</small></a>
+      <a class="acceso acceso-europa" href="continentes/europa/index.html">Europa<small>Explorar países</small></a>
+      <a class="acceso acceso-oceania" href="continentes/oceania/index.html">Oceanía<small>Explorar países</small></a>
+    </nav>
+  </main>
   <div id="etiqueta" role="status" aria-live="polite"></div>
 
   <script src="script.js"></script>

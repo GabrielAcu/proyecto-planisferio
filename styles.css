@@ -66,10 +66,50 @@ svg { width: 100%; height: auto; display: block; background: #a8d4f0; }
   white-space: normal;
 }
 
+.accesos-continentes { display: none; }
+
 @media (max-width: 600px) {
-  h1 { font-size: 1.35rem; }
-  .leyenda span { margin-right: 8px; }
-  .oceano { font-size: 25px; stroke-width: 6px; }
+  body { min-height: 100vh; background: #f2f7fb; color: #1d3557; }
+  .pagina-inicio { padding: max(16px, env(safe-area-inset-top)) 14px calc(24px + env(safe-area-inset-bottom)); }
+  h1 { font-size: 1.45rem; line-height: 1.2; margin: 0 0 8px; }
+  p { max-width: 48rem; margin: 0 0 12px; line-height: 1.5; }
+  .leyenda { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+  .leyenda span {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    padding: 5px 8px;
+    border-radius: 999px;
+    background: #fff;
+    font-size: .75rem;
+  }
+  .mapa-mundo { overflow: hidden; border-radius: 12px; box-shadow: 0 4px 14px rgba(29, 53, 87, .12); }
+  svg { border-radius: 12px; }
+  .oceano { font-size: 34px; stroke-width: 8px; }
+  .accesos-continentes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
+  .acceso {
+    display: flex;
+    min-height: 60px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 12px;
+    border: 1px solid #d5e4ed;
+    border-left: 4px solid var(--color-continente);
+    border-radius: 12px;
+    background: #fff;
+    color: #1d3557;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(29, 53, 87, .06);
+  }
+  .acceso small { margin-top: 3px; color: #527084; font-size: .75rem; font-weight: 400; }
+  .acceso:focus-visible { outline: 3px solid #457b9d; outline-offset: 2px; }
+  .acceso-africa { --color-continente: #e9c46a; }
+  .acceso-america { --color-continente: #e76f51; }
+  .acceso-antartida { --color-continente: #a8dadc; }
+  .acceso-asia { --color-continente: #2a9d8f; }
+  .acceso-europa { --color-continente: #457b9d; }
+  .acceso-oceania { --color-continente: #9b5de5; }
 }
 
 @media (prefers-reduced-motion: reduce) {
