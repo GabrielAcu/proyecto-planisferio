@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oceanía | Planisferio interactivo</title>
+  <link rel="stylesheet" href="oceania.css">
+</head>
+<body data-continente="Oceanía">
+  <a id="volver" href="../../index.html">Volver al mundo</a>
+  <h1>Oceanía</h1>
+  <nav id="controles-zoom" aria-label="Controles de acercamiento">
+    <button id="acercar" type="button" aria-label="Acercar">+</button>
+    <span id="nivel-zoom" aria-live="polite">100%</span>
+    <button id="alejar" type="button" aria-label="Alejar">-</button>
+    <button id="restablecer-zoom" type="button">Restablecer</button>
+  </nav>
+  <label class="solo-lectores" for="selector-pais">Buscar o seleccionar un país</label>
+  <select id="selector-pais">
+    <option value="">Buscar o seleccionar un país</option>
+  </select>
+  <p class="ayuda-navegacion">Usa Ctrl + rueda para acercar o alejar el mapa; la rueda sola desplaza la página.</p>
+  <div id="mapa-contenedor">
+    <svg id="mapa" viewBox="0 0 1000 500" aria-label="Mapa de Oceanía y sus países"></svg>
+    <aside id="info-pais" aria-labelledby="nombre-pais" hidden>
+      <button id="cerrar-info" type="button" aria-label="Cerrar información">Cerrar</button>
+      <img id="bandera-pais" class="bandera-pais" width="96" height="64" alt="" loading="lazy" decoding="async" hidden>
+      <p id="estado-bandera" hidden></p>
+      <h2 id="nombre-pais"></h2>
+      <dl>
+        <div><dt>Continente</dt><dd id="info-continente"></dd></div>
+        <div><dt>Código ISO</dt><dd id="info-codigo"></dd></div>
+        <div><dt>Población estimada</dt><dd id="info-poblacion"></dd></div>
+      </dl>
+    </aside>
+  </div>
+  <div id="etiqueta" role="status" aria-live="polite"></div>
+  <script src="../continente.js"></script>
+</body>
+</html>

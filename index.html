@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Planisferio interactivo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Planisferio: los seis continentes</h1>
+  <p>Los nombres en azul identifican los océanos; las líneas verticales marcan meridianos cada 30° y la horizontal, el ecuador. Selecciona un continente para ver sus países.</p>
+  <div class="leyenda" id="leyenda"></div>
+  <svg id="mapa" viewBox="0 0 1000 500" aria-label="Planisferio interactivo con continentes y océanos"></svg>
+  <div id="etiqueta" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

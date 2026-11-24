@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Argentina | Provincias | Planisferio interactivo</title>
+  <link rel="stylesheet" href="argentina.css">
+</head>
+<body>
+  <main>
+    <a id="volver" href="../../index.html">Volver a América</a>
+    <h1>Argentina</h1>
+    <p>Explora las 23 provincias y la Ciudad Autónoma de Buenos Aires.</p>
+    <p id="estado-mapa" role="status" aria-live="polite">Cargando divisiones administrativas...</p>
+    <small>Cartografía de prueba: Natural Earth, Admin 1 (escala 1:10m).</small>
+    <label class="solo-lectores" for="selector-provincia">Seleccionar una provincia</label>
+    <select id="selector-provincia">
+      <option value="">Seleccionar una provincia</option>
+    </select>
+    <div class="contenido">
+      <svg id="mapa" viewBox="0 0 640 900" aria-label="Mapa interactivo de las provincias de Argentina"></svg>
+      <aside id="info-provincia" aria-labelledby="nombre-provincia" hidden>
+        <h2 id="nombre-provincia"></h2>
+        <dl>
+          <div><dt>División administrativa</dt><dd id="tipo-provincia"></dd></div>
+        </dl>
+      </aside>
+    </div>
+    <div id="etiqueta" role="status" aria-live="polite"></div>
+  </main>
+  <script src="argentina.js"></script>
+</body>
+</html>

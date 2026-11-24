@@ -1,0 +1,77 @@
+body { margin: 0; font-family: sans-serif; background: #cfe8f7; }
+h1 { font-size: 1.2rem; margin: 12px; }
+p { margin: 0 12px 8px; }
+.leyenda { margin: 0 12px 8px; }
+.leyenda span { display: inline-block; margin-right: 14px; }
+.leyenda i { display: inline-block; width: 12px; height: 12px; margin-right: 4px; vertical-align: middle; }
+svg { width: 100%; height: auto; display: block; background: #a8d4f0; }
+.continente { cursor: pointer; }
+.continente path { transition: fill .2s ease; }
+.continente:focus { outline: none; }
+.continente:focus path { filter: brightness(.8); }
+.grilla-geografica { pointer-events: none; }
+.meridiano {
+  stroke: #1d3557;
+  stroke-width: 1;
+  stroke-dasharray: 4 5;
+  opacity: .38;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}
+.meridiano-greenwich {
+  stroke: #f4a300;
+  stroke-width: 1.8;
+  stroke-dasharray: none;
+  opacity: 1;
+  pointer-events: stroke;
+  cursor: help;
+}
+.ecuador-borde {
+  stroke: #fff;
+  stroke-width: 3.5;
+  opacity: .9;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}
+.ecuador {
+  stroke: #d62828;
+  stroke-width: 1.6;
+  opacity: 1;
+  vector-effect: non-scaling-stroke;
+  pointer-events: stroke;
+  cursor: help;
+}
+.etiquetas-oceanos { pointer-events: none; }
+.oceano {
+  fill: #31556b;
+  font-size: 17px;
+  font-weight: 600;
+  paint-order: stroke;
+  stroke: #a8d4f0;
+  stroke-linejoin: round;
+  stroke-width: 4px;
+  text-anchor: middle;
+}
+#etiqueta {
+  position: fixed;
+  z-index: 1;
+  display: none;
+  pointer-events: none;
+  background: rgba(29, 53, 87, .92);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: .9rem;
+  max-width: calc(100vw - 16px);
+  white-space: normal;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 1.35rem; }
+  .leyenda span { margin-right: 8px; }
+  .oceano { font-size: 25px; stroke-width: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .continente path { transition: none; }
+}
